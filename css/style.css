@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+body {color: #333;}
+img {display: block; max-width: 100%;}
+li {list-style: none;}
+a {text-decoration: none; color: #333;}
+
+main {display:flex;}
+
+#left {flex-basis: 200px;}
+/* 로고 */
+#left img[alt="logo"] {width: 100%; height: 90px;}
+/* 메뉴 */
+#left ul {margin: 30px 10px;}
+#left li {border: 2px solid blue; position: relative;}
+#left ul a {display: block; font-weight: 600;}
+a.mainMenu {padding: 10px; text-align: center; background: skyblue; color: white;}
+a.mainMenu:hover, a.mainMenu.act {background: dodgerblue; color: white; font-size: 1.15rem; padding: 10px;}
+nav.subMenu {position: absolute; width: 100%; left: 180px; top: 0; background: darkcyan; z-index: 1; display: none;}
+nav.subMenu a {text-align: center; padding: 5px; color: white;}
+nav.subMenu a:hover, nav.subMenu a.act {background: darkseagreen; color: white;}
+
+/* 스팟메뉴 */
+#spotMenu {text-align: center; font-weight: bold;}
+#spotMenu a:hover {color: blue;}
+
+/* 가운데콘텐츠*/
+
+#center {flex-basis: 400px; margin: 0 20px; height: 600px;}
+#content {margin-bottom: 20px;}
+#content img {width: 100%; height: 100px;}
+
+/* 공지사항 */
+#notice {margin-bottom:0px;}
+#notice h3 {border-bottom:37px solid #ddd; border-left:20px solid transparent;border-right:20px solid transparent; width:130px;}
+#notice span {display:block; transform:translate(10px,30px); color:black; font-size:1.1rem;}
+#notice ol {border-top:2px solid #ddd; line-height:180%; padding-top:10px;}
+#notice li a:hover {color:tomato; text-decoration:underline;}
+#notice li span {color: black; float: right; transform: translateY(1px); font-size:.8rem;}
+
+/* 갤러리 */
+#gallery {margin-bottom: 30px;}
+#gallery h3 {border-bottom: 37px solid #ddd; border-left: 20px solid transparent; border-right: 20px solid transparent; width: 130px;}
+#gallery span {display: block; transform: translate(10px, 30px); color: black; font-size: 1.1rem;}
+#gallery>div {border-top: 2px solid #ddd; padding-top: 10px; display: flex; justify-content: space-between;}
+#gallery img {width: 190px;}
+#gallery a {display: block; text-align: center; padding-top: 5px;}
+#gallery a:hover {color: green; text-decoration: underline;}
+
+/* 오른쪽 콘텐츠 */
+#right {flex-basis: calc(100% - 200px - 400px); height: 600px; overflow: hidden;}
+#slide {position: relative; top: -1200px;}
+#slide img {width: 100%; height: 600px;}
+
+/* 푸터 */
+footer {height: 100px; background: #ddd; display: flex; align-items: center;}
+footer img[alt="하단로고"] {width: 200px; height: 100px;}
+footer p {flex: 1; margin-left: 30px; text-align: center;}
+footer>div {display: flex; align-items: center; padding-right: 10px;}
+footer div img {width: 60px; margin: 10px;}
